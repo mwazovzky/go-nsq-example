@@ -6,9 +6,10 @@
 curl http://localhost:4151/ping
 curl http://localhost:4161/ping
 curl http://localhost:4171/ping
+```
 
-curl -d 'Hello World' 'http://localhost:4151/pub?topic=test'
+## Publish message
 
-curl http://localhost:4161/topics
-{"topics":["test"]}
+```
+curl -d '{"Title":"Message Title","Content":"Message body","Timestamp":"2022-04-02 23:23"}' 'http://localhost:4151/pub?topic=test_topic'
 ```

@@ -23,3 +23,10 @@ services:
       - nsqlookupd  
     ports:
       - 4171:4171
+
+  golang:
+    container_name: golang
+    build:
+      context: .
+    depends_on:
+      - nsqd
